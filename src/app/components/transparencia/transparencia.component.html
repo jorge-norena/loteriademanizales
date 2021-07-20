@@ -1,0 +1,126 @@
+<div class="container-fluid m-0 p-0">
+
+    <div class="fondo-azul-oscuro p-3" id="contenidoTransparencia" style="min-height: 100vh;">
+        <a [routerLink]="[ '/' ]" class="btn btn-primary mt-3"><i class="fas fa-angle-left fa-lg"></i> <span class="ml-2 d-none d-lg-inline">Volver</span></a>
+        <h1 class="py-4">
+            Transparencia y Acceso <small class="text-muted" style="color: #a3b6cd !important;"> a la Información Pública</small>
+        </h1>
+
+        <ul class="list-group list-group-flush" style="background-color: transparent !important;">
+            <li *ngFor="let obj1 of objEstructura" class="list-group-item">
+                <div id="nivel1">
+                    <div *ngIf="obj1.tipo === 'd'">
+                        <div class="alert alert-light shadow" role="alert">
+                            <h3 class="text-uppercase">
+                                <i class="fas fa-folder-open"></i> {{obj1.nombre}}
+                            </h3>
+                        </div>
+                        <div *ngIf="obj1.tipo === 'd'">
+                            <div *ngFor="let obj2 of obj1.cont">
+                                <div class="ml-5 mb-2" id="nivel2">
+                                    <div *ngIf="obj2.tipo === 'd'">
+                                        <h4 class="text-uppercase">
+                                            <i class="fas fa-folder-open"></i> {{obj2.nombre}}
+                                        </h4>
+                                        <div *ngFor="let obj3 of obj2.cont">
+                                            <div class="ml-4 mb-2" id="nivel3">
+                                                <div *ngIf="obj3.tipo === 'd'">
+                                                    <h5 class="text-uppercase">
+                                                        <i class="fas fa-folder-open"></i> {{obj3.nombre}}
+                                                    </h5>
+                                                    <div *ngFor="let obj4 of obj3.cont">
+                                                        <div class="ml-4 mb-2" id="nivel4">
+                                                            <div *ngIf="obj4.tipo === 'd'">
+                                                                <h5 class="text-uppercase">
+                                                                    <i class="fas fa-folder-open"></i> {{obj4.nombre}}
+                                                                </h5>
+                                                                <div *ngFor="let obj5 of obj4.cont">
+                                                                    <div class="ml-4" id="nivel5">
+                                                                        <div *ngIf="obj5.tipo === 'd'">
+                                                                            <h5 class="text-uppercase">
+                                                                                <i class="fas fa-folder-open"></i> {{obj5.nombre}}
+                                                                            </h5>
+                                                                            <div *ngFor="let obj6 of obj5.cont">
+                                                                                <div class="ml-4" id="nivel6">
+                                                                                    <div *ngIf="obj6.tipo === 'd'">
+                                                                                        <h5 class="text-uppercase ">
+                                                                                            <i class="fas fa-chevron-right"></i> {{obj5.nombre}}
+                                                                                        </h5>
+                                                                                        <div *ngFor="let obj7 of obj6.cont">
+                                                                                            <div *ngIf="obj7.tipo === 'd'">
+                                                                                                <h5 class="text-uppercase">
+                                                                                                    <i class="fas fa-chevron-right"></i> {{obj7.nombre}}
+                                                                                                </h5>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div *ngIf="obj6.tipo === 'a'">
+                                                                                        <a class="" href="./assets/docs/{{obj1.nombre}}/{{obj2.nombre}}/{{obj3.nombre}}/{{obj4.nombre}}/{{obj5.nombre}}/{{obj6.nombre}}" target="_blank">
+                                                                                            <i class="far fa-file-alt"></i> {{obj6.nombre}}
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div *ngIf="obj5.tipo === 'a'">
+                                                                            <a class="" href="./assets/docs/{{obj1.nombre}}/{{obj2.nombre}}/{{obj3.nombre}}/{{obj4.nombre}}/{{obj5.nombre}}" target="_blank">
+                                                                                <i class="far fa-file-alt"></i> {{obj5.nombre}}
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div *ngIf="obj4.tipo === 'a'">
+                                                                <a class="text-lowercase" href="./assets/docs/{{obj1.nombre}}/{{obj2.nombre}}/{{obj3.nombre}}/{{obj4.nombre}}" target="_blank">
+                                                                    <i class="far fa-file-alt"></i> {{obj4.nombre}}
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div *ngIf="obj3.tipo === 'a'">
+                                                    <a class="text-lowercase" href="./assets/docs/{{obj1.nombre}}/{{obj2.nombre}}/{{obj3.nombre}}" target="_blank">
+                                                        <i class="far fa-file-alt"></i> {{obj3.nombre}}
+                                                    </a>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                    <div *ngIf="obj2.tipo === 'a'">
+                                        <h4 class="text-lowercase">
+                                            <div class="text-lowercase">
+                                                <a href="./assets/docs/{{obj1.nombre}}/{{obj2.nombre}}">
+                                                    <i class="fas fa-chevron-right"></i> {{obj2.nombre}}
+                                                </a>
+                                            </div>
+                                        </h4>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-lowercase" *ngIf="obj1.tipo === 'a'">
+                        <a href="./assets/docs/{{obj1.nombre}}" target="_blank">
+                            <i class="far fa-file-alt"></i> {{obj1.nombre}}
+                        </a>
+                    </h3>
+                </div>
+
+
+
+
+            </li>
+        </ul>
+
+
+    </div>
+</div>
+
+<app-precarga *ngIf="cargando"></app-precarga>

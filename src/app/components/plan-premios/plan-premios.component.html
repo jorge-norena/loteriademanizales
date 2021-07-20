@@ -1,0 +1,90 @@
+<div class="container-fluid m-0 p-0">
+
+    <div class="fondo-oro-1 p-3" id="contenidoPlan" style="min-height: 100vh;">
+        <a [routerLink]="[ '/' ]" class="btn btn-primary mt-3"><i class="fas fa-angle-left fa-lg"></i> <span class="ml-2 d-none d-lg-inline">Volver</span></a>
+        <h1 class="py-4 text-dark">
+            Plan de Premios <small class="text-muted" style="color: #585858 !important;"> Lotería de Manizales</small>
+        </h1>
+        <div class="row m-0 p-0 mb-3">
+            <div class="col-12 col-lg-7 m-0 p-0 p-lg-3 p-xl-4 mb-3">
+                <div class="lineaPlanPremios p-2 p-lg-3 p-xl-4 mb-2 shadow" *ngFor="let pp1 of arrPp1" style="border-radius: 10px;">
+                    <div class="row m-0 p-0">
+                        <div class="col-12 m-0 p-0">
+                            <div class=" d-block d-lg-inline nombre">
+                                {{pp1.nom}}
+                            </div>
+                            <div class="d-block d-lg-inline bruto" style="font-weight: 600; white-space: nowrap;"> {{pp1.bru}}</div>
+                        </div>
+                        <div class="col-12 text-right neto m-0 p-0">
+                            <div class="texto-pequeno" style="opacity: 0.7;">Premio Neto </div>
+                            <i class="fas fa-hand-holding fa-lg" style="transform: translate(30px, 10px); opacity: 0.7;"></i> {{pp1.net}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5 m-0 p-0 p-lg-3 p-xl-4">
+                <div *ngIf="true" class="area-extra-plan m-0 p-1 p-lg-3 p-xl-4 mb-3 shadow">
+                    <p class="text-center my-3">
+                        <img src="assets/img/logotop.png" alt="">
+                    </p>
+                    <ul class="list-group list-group-flush">
+                        <li *ngFor="let adic of arrAd" class="list-group-item">
+                            <div class="row">
+                                <div class="co-1 text-warning text-right">
+                                    <i class="fas fa-angle-right fa-lg"></i>
+                                </div>
+                                <div class="col-7" style="font-weight: 600;">
+
+                                    {{adic.nom}}
+
+                                </div>
+                                <div class="col-4" style="white-space: nowrap">{{adic.val}}</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div *ngIf="true" class="fondo-azul-textura lineaAproxPremios p-2 p-lg-3 p-xl-4 my-3 shadow">
+                    <h3 class="my-4 titulo">Aproximaciones al Mayor <small>misma serie</small></h3>
+                    <div class="row mb-2">
+                        <div class="col monto text-right">P. bruto</div>
+                        <div class="col monto text-right">P. neto</div>
+                        <div class="col monto text-right">Tot. premios</div>
+                    </div>
+                    <div class="ml-0" *ngFor="let pp2 of arrPp2">
+                        <div style="font-weight: 600;">
+                            {{pp2.nom}} <span class="badge bg-warning text-dark" style="opacity: 0.5;">{{pp2.num}} Ganadores</span>
+                        </div>
+                        <div class="row">
+                            <div class="col monto text-right" style="white-space: nowrap">{{pp2.bru}}</div>
+                            <div class="col monto text-right" style="white-space: nowrap">{{pp2.net}}</div>
+                            <div class="col monto text-right" style="white-space: nowrap">{{pp2.tot}}</div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+                <div *ngIf="true" class="fondo-azul-textura lineaAproxPremios p-2 p-lg-3 p-xl-4 mb-2">
+                    <h3 class="my-4 titulo">Aproximaciones al Mayor <small>diferente serie</small></h3>
+                    <div class="row mb-2">
+                        <div class="col monto text-right">P. bruto</div>
+                        <div class="col monto text-right">P. neto</div>
+                        <div class="col monto text-right">Tot. premios</div>
+                    </div>
+                    <div class="ml-0" *ngFor="let pp3 of arrPp3">
+                        <div style="font-weight: 600;">
+                            {{pp3.nom}} <span class="badge bg-warning text-dark" style="opacity: 0.5;">{{pp3.num}} Ganadores</span>
+                        </div>
+                        <div class="row">
+                            <div class="col monto text-right" style="white-space: nowrap">{{pp3.bru}}</div>
+                            <div class="col monto text-right" style="white-space: nowrap">{{pp3.net}}</div>
+                            <div class="col monto text-right" style="white-space: nowrap">{{pp3.tot}}</div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

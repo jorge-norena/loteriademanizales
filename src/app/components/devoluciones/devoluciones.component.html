@@ -1,0 +1,166 @@
+<div class="container-fluid m-0 p-0">
+
+    <div class="p-3" id="contenidoTransparencia" style="min-height: 100vh;">
+        <a [routerLink]="[ '/' ]" class="btn btn-primary mt-3"><i class="fas fa-angle-left fa-lg"></i> <span class="ml-2 d-none d-lg-inline">Volver</span></a>
+        <h1 class="py-4">
+            Devoluciones <small class="text-muted" style="color: #a3b6cd !important;"> distribuidores</small>
+        </h1>
+
+        <div *ngIf="logueado" id="areaDevol">
+            <nav class="navbar navbar-light fondo-azul-loteria-100 shadow" style="border: solid 1px #1d599f; border-radius: 10px; overflow: hidden;">
+                <a class="navbar-brand"><span style="font-weight: 600;">Distribuidor:</span> {{nombreDistribuidor}}</a>
+                <form class="form-inline">
+                    <a href="http://loteriademanizales.com/#/devoluciones" class="btn btn-danger" (click)="logout()"><i class="fas fa-power-off"></i> Salir</a>
+                </form>
+            </nav>
+            <div class="row mt-5">
+                <div class="col-10 col-lg-6 offset-1 offset-lg-3">
+                    <div *ngIf="!devolIniciada" class="alert alert-primary text-light text-center bg-dark" style="cursor: pointer;">
+                        <!-- <h1 class="display1">
+                            <i class="fas fa-sync-alt"></i>
+                        </h1> -->
+                        <form (ngSubmit)="enviarArchivo(loadForm)" #loadForm="ngForm" novalidate>
+                            <div class="h-100 my-5">
+                                <div class="text-center" style="min-height: 200px;">
+                                    <div class="animated fadeIn">
+                                        <label for="archivoCarga" id="contenedorCargaArchivos">
+                                        <h1 [ngClass]="{'animate__animated animate__pulse animate__infinite': !file64}" class="text-light" style="opacity: 0.7;"><span class="fa fa-upload fa-3x"></span></h1>
+                                        <div class="lead">Click para seleccionar un documento</div>
+
+                                        <div id="contenedorBotonCargarArchivo" style="text-align: center;">
+                                            <br>
+                                            <button *ngIf="file64" (click)="loadFile()" id="botonCargarArchivo" type="submit" class="animate__animated animate__heartBeat btn btn-warning" [disabled]="loadForm.invalid" style="min-width: 250px;"><strong>ENVIAR:</strong>  <br> {{ filename }}</button>
+                                        </div>
+                                        <div class="my-2" style="font-size: 11px">Archivos permitidos:</div>
+                                        <div>
+                                            <span *ngFor="let arch of arrArchivosPermitidos" class="badge badge-pill badge-primary mx-1" style="opacity: 0.7;">{{arch}}</span>
+                                        </div>
+                                        <div id="contenedorNombreArchivoCargado"></div>
+                                        <!-- <div id="contenedorBotonCargarArchivo" style="text-align: center;">
+                                            <br>
+                                            <button *ngIf="file64" (click)="loadFile()" id="botonCargarArchivo" type="submit" class="btn btn-primary" [disabled]="loadForm.invalid" style="min-width: 250px;"><strong>Cargar Archivo:</strong>  <br> {{ filename }}</button>
+                                        </div> -->
+                                    </label>
+                                        <div>
+                                            <input id="archivoCarga" type="file" style="opacity: 0" (change)="changeListener($event)" required>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br><br>
+                        </form>
+                    </div>
+
+
+                    <div *ngIf="devolIniciada" class="alert alert-primary text-light text-center bg-dark text-uppercase py-5">
+                        <h3 class="text-uppercase">Proceso de Devolución</h3>
+
+                        <p *ngIf="!devolFinalizada" class="my-3">
+                            <img src="assets/img/animPrecargaDevol.svg" alt="Transfiriendo">
+                        </p>
+                        <div *ngIf="devolIniciada" class="my-3">Iniciando...</div>
+                        <div *ngIf="devolConectada" class="my-3"><i class="fas fa-thumbs-up"></i><br> Conectado</div>
+                        <div *ngIf="devolEnviada" class="my-3"><i class="fas fa-thumbs-up"></i><br> Archivo enviado</div>
+                        <div *ngIf="devolRecibida" class="my-3"><i class="fas fa-thumbs-up"></i><br> Devolución Recibida <br><small>Esperando confirmación...</small></div>
+                        <div *ngIf="devolConfirmada" class="my-3"><i class="fas fa-thumbs-up"></i><br> Confirmada</div>
+                        <div *ngIf="devolFinalizada" class="my-3">
+                            <div>
+                                Finalizando proceso
+                            </div>
+                            <div *ngIf="errDevol">
+                                <div>ERROR</div>
+                                <button class="btn btn-danger" (click)="resetProcess()">Reintentar</button>
+                            </div>
+                            <div *ngIf="!errDevol">
+                                <div>EXITOSO</div>
+                                <div class="row">
+                                    <div class="col my-2">
+
+                                        <div class="text-dark p-2" style="width: 100%; height: 300px; background-color: rgba(255, 255, 255, 0.5); border-radius: 10px;">
+                                            <textarea name="confirma" id="confirma" style="width: 100%; height: 100%;">
+                                                {{contenidoDevol}}
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-left">
+                                    <div class="col-12"><button class="btn btn-warning btn-block shadow" (click)="descargarConfirmacion()"> <i class="fas fa-file-download fa-2x"></i><br> <strong> Descargar Comprobante</strong><br> <span>{{ nombreConf }}</span></button></div>
+                                    <div class="col-12"><button class="btn btn-light btn-block mt-3" (click)="resetProcess()">Inicio</button></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div *ngIf="!logueado" id="areaLogin">
+            <div class="row">
+                <div class="col-10 offset-1 col-lg-4 offset-lg-4" style="position: relative;">
+
+                    <div class="alert alert-primary text-light text-center bg-dark my-4 p-4 shadow">
+                        <div *ngIf="esHoy">
+                            <h1 class="text-center text-warning display-1">
+                                <i class="fas fa-id-card"></i>
+                            </h1>
+                            <h4>Devoluciones para el sorteo {{ numeroProximoSorteo }} de la Lotería de Manizales</h4>
+                            <p *ngIf="!error" class="text-light text-center small">
+                                Ingrese sus credenciales de acceso
+                            </p>
+                        </div>
+                        <p *ngIf="error" class="text-danger text-center small">
+                            Error de autenticación
+                        </p>
+
+                        <p *ngIf="!esHoy">Próximo sorteo: <br><strong>{{ numeroProximoSorteo }}</strong> </p>
+                        <p *ngIf="!esHoy" class="badge badge-danger p-3">{{ fechaProximoSorteo | date:'fullDate'}}</p>
+                        <p *ngIf="!esHoy" class="small text-danger">
+                            El acceso al sistema de devoluciones de la Lotería de Manizales está deshabilitado hasta el día del sorteo
+                        </p>
+
+                        <form *ngIf="esHoy" (ngSubmit)="loguear()" #loginForm="ngForm" novalidate>
+                            <div class="input-group border-0 shadow">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text bg-warning"><span class="fa fa-user"></span></div>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Código Distribuidor" name="user" [(ngModel)]="objLogin.usr" #user="ngModel" required [ngClass]="{'is-invalid': (user.errors?.required || user.errors?.email)  && user.touched}">                                </div>
+                            <div *ngIf="user.errors?.required && user.touched" class="invalid-feedback d-block">
+                                Ingrese su código de distribuidor.
+                            </div>
+
+                            <div class="input-group mt-3 shadow">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text bg-warning"><span class="fa fa-unlock-alt"></span></div>
+                                </div>
+                                <input type="password" class="form-control" placeholder="Contraseña" name="contra" [(ngModel)]="objLogin.pwd" #cont="ngModel" required [ngClass]="{'is-invalid': cont.errors?.required && cont.touched}">
+                            </div>
+                            <div *ngIf="cont.errors?.required && cont.touched" class="invalid-feedback d-block">
+                                Ingrese su contraseña.
+                            </div>
+
+                            <div class="mt-4" style="text-align: center;">
+                                <button type="submit" class="btn btn-primary shadow" [disabled]="cargando">Ingresar</button>
+                            </div>
+                        </form>
+                        <app-precarga *ngIf="cargando"></app-precarga>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

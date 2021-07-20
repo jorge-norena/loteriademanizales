@@ -1,0 +1,208 @@
+{
+    "sorteo": [{
+        "num": "4685",
+        "fec": "2021-03-10",
+        "prox": "2021-03-17 22:30"
+    }],
+    "resultados": [{
+            "nom": "Mayor",
+            "pre": 1500000000,
+            "num": "9397",
+            "ser": "183",
+            "ciu": "Fusagasug\u00e1",
+            "dep": "25"
+        },
+        {
+            "nom": "Seco 1",
+            "pre": "50000000",
+            "num": "7447",
+            "ser": "157",
+            "ciu": "Bogot\u00e1",
+            "dep": "11"
+        },
+        {
+            "nom": "Seco 2",
+            "pre": 40000000,
+            "num": "7606",
+            "ser": "060",
+            "ciu": "Manizales",
+            "dep": "17"
+        },
+        {
+            "nom": "Seco 3",
+            "pre": 40000000,
+            "num": "9094",
+            "ser": "138",
+            "ciu": "Cali",
+            "dep": "76"
+        },
+        {
+            "nom": "Seco 4",
+            "pre": 40000000,
+            "num": "1193",
+            "ser": "039",
+            "ciu": "Cali",
+            "dep": "76"
+        },
+        {
+            "nom": "Seco 5",
+            "pre": 40000000,
+            "num": "0898",
+            "ser": "032",
+            "ciu": "Ibagu\u00e9",
+            "dep": "73"
+        },
+        {
+            "nom": "Seco 6",
+            "pre": 40000000,
+            "num": "8726",
+            "ser": "111",
+            "ciu": "Manizales",
+            "dep": "17"
+        },
+        {
+            "nom": "Seco 7",
+            "pre": 30000000,
+            "num": "7637",
+            "ser": "122",
+            "ciu": "Manizales",
+            "dep": "17"
+        },
+        {
+            "nom": "Seco 8",
+            "pre": 30000000,
+            "num": "9318",
+            "ser": "186",
+            "ciu": "Cali",
+            "dep": "76"
+        },
+        {
+            "nom": "Seco 9",
+            "pre": 30000000,
+            "num": "5497",
+            "ser": "087",
+            "ciu": "Medell\u00edn",
+            "dep": "5"
+        },
+        {
+            "nom": "Seco 10",
+            "pre": 30000000,
+            "num": "3071",
+            "ser": "029",
+            "ciu": "Cali",
+            "dep": "76"
+        },
+        {
+            "nom": "Seco 11",
+            "pre": 30000000,
+            "num": "7295",
+            "ser": "014",
+            "ciu": "Bogot\u00e1",
+            "dep": "11"
+        },
+        {
+            "nom": "Seco 12",
+            "pre": 20000000,
+            "num": "3630",
+            "ser": "141",
+            "ciu": "Medell\u00edn",
+            "dep": "5"
+        },
+        {
+            "nom": "Seco 13",
+            "pre": 20000000,
+            "num": "6221",
+            "ser": "149",
+            "ciu": "Manizales",
+            "dep": "17"
+        },
+        {
+            "nom": "Seco 14",
+            "pre": 20000000,
+            "num": "0148",
+            "ser": "074",
+            "ciu": "Manizales",
+            "dep": "17"
+        },
+        {
+            "nom": "Seco 15",
+            "pre": 20000000,
+            "num": "7455",
+            "ser": "061",
+            "ciu": "Cali",
+            "dep": "76"
+        },
+        {
+            "nom": "Seco 16",
+            "pre": 20000000,
+            "num": "2574",
+            "ser": "189",
+            "ciu": "Cali",
+            "dep": "76"
+        },
+        {
+            "nom": "Seco 17",
+            "pre": 20000000,
+            "num": "3191",
+            "ser": "163",
+            "ciu": "Cali",
+            "dep": "76"
+        },
+        {
+            "nom": "Seco 18",
+            "pre": 10000000,
+            "num": "4809",
+            "ser": "108",
+            "ciu": "Manizales",
+            "dep": "17"
+        },
+        {
+            "nom": "Seco 19",
+            "pre": 10000000,
+            "num": "8458",
+            "ser": "051",
+            "ciu": "Bogot\u00e1",
+            "dep": "11"
+        },
+        {
+            "nom": "Seco 20",
+            "pre": 10000000,
+            "num": "2982",
+            "ser": "106",
+            "ciu": "Bogot\u00e1",
+            "dep": "11"
+        },
+        {
+            "nom": "Seco 21",
+            "pre": 10000000,
+            "num": "7985",
+            "ser": "177",
+            "ciu": "Cali",
+            "dep": "76"
+        },
+        {
+            "nom": "Seco 22",
+            "pre": 10000000,
+            "num": "6024",
+            "ser": "179",
+            "ciu": "Medell\u00edn",
+            "dep": "5"
+        },
+        {
+            "nom": "Seco 23",
+            "pre": 10000000,
+            "num": "0095",
+            "ser": "180",
+            "ciu": "Manizales",
+            "dep": 17
+        },
+        {
+            "nom": "Seco 24",
+            "pre": 10000000,
+            "num": "9205",
+            "ser": "100",
+            "ciu": "Manizales",
+            "dep": "17"
+        }
+    ]
+}

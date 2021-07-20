@@ -1,1 +1,527 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Secuencia colores efecto oro
+// Secuencia1
+$sec-oro-1-a: #CC9934
+$sec-oro-1-b:#AF7819
+$sec-oro-1-c:#FACA68
+$sec-oro-1-d:#E2C43D
+
+
+$azul-loteria-100: #000066 !default
+// $azul-loteria-80: #1d599f !default
+$azul-loteria-80: #121288 !default
+$azul-loteria-40: #a3b6cd !default 
+$amarillo-loteria-100: #fed900 !default
+$amarillo-loteria-80: #fee133 !default
+$amarillo-loteria-60: #fee866 !default
+$rojo-loteria-100: #D90416 !default
+$pardo-loteria-100: #F5AB00 !default
+$pardo-loteria-60: #f9cd66 !default
+$verde-loteria-100: #99BE11 !default
+$color-blanco-100: #FFFFFF !default
+$color-blanco-90: #ebebeb !default
+$color-blanco-80: #d4d4d4 !default
+$color-blanco-50: #9b9b9b !default
+$color-negro-90: #474747
+$color-negro-80: #333333
+$color-negro-70: #6f6f6f
+$color-negro-50: #9e9e9e
+$color-azul-oscuro: #001874
+
+$fuenteOswald: 'Oswald', sans-serif
+$fuenteMontserrat: 'Montserrat', sans-serif
+
+$tamanoTextoPeq: 12px
+$tamanoTextoNorm: 14px
+
+@mixin color-azul-loteria-100()
+  color: $azul-loteria-100
+
+@mixin color-amarillo-loteria-100()
+    color: $amarillo-loteria-100
+      
+@mixin fondo-amarillo-loteria-100()
+    background-color: $amarillo-loteria-100
+
+@mixin fondo-amarillo-loteria-80()
+    background-color: $amarillo-loteria-80
+
+@mixin fondo-azul-loteria-100()
+    background-color: $azul-loteria-100
+
+@mixin fondo-azul-loteria-80()
+    background-color: $azul-loteria-80
+
+
+
+body
+    font-family: $fuenteMontserrat
+    font-weight: 400
+    color: #333333
+    background-color: $color-negro-80
+    margin: 0
+    margin-top: 70px
+    height: 100%
+h1
+    font-weight: 600
+
+hr
+    opacity: 0.3
+
+input, textarea
+        background-color: $color-negro-70 !important
+        color: $color-blanco-80 !important
+        border: solid 2px $color-negro-80 !important
+
+// textarea
+//         background-color: $color-negro-70 !important
+//         border-width: 0px
+//         font-size: 12px
+        
+.input-group-text
+    border: solid 2px $azul-loteria-100 !important
+
+.texto-azul-loteria
+    @include color-azul-loteria-100
+    
+.texto-amarillo-loteria-100
+    @include color-amarillo-loteria-100
+
+.texto-blanco-loteria-100
+    color: $color-blanco-100
+
+.texto-blanco-loteria-80
+    color: $color-blanco-80
+
+.fondo-azul-oscuro
+    background-color: $color-azul-oscuro
+
+.fondo-azul-loteria-100
+    @include fondo-azul-loteria-100
+
+.fondo-azul-loteria-80
+    @include fondo-azul-loteria-80
+
+.fondo-amarillo-loteria-100
+    @include fondo-amarillo-loteria-100
+
+.fondo-amarillo-loteria-80
+    @include fondo-amarillo-loteria-80
+
+.fondo-amarillo-loteria-60
+    background-color: $amarillo-loteria-60
+
+.texto-pardo-loteria-100
+    color: $pardo-loteria-100
+
+.fondo-verde-loteria-100
+    background-color: $verde-loteria-100
+
+.fondo-oro-1
+    background-image: linear-gradient(to right, $sec-oro-1-a, $sec-oro-1-b, $sec-oro-1-c, $sec-oro-1-d)
+  
+.texto-oro-1
+  color: $sec-oro-1-c
+
+.fondo-amarillo-degrad
+    // background-image: linear-gradient(to right, $pardo-loteria-60, $amarillo-loteria-60), url(./assets/img/trama1.png)
+    background-image: url(./assets/img/tramaAmarilla.jpg)
+    // background-attachment: fixed
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 100% 100%
+
+.fondo-amarillo-menu
+    background-image: linear-gradient(27deg, $sec-oro-1-a, $sec-oro-1-b, $sec-oro-1-c, $sec-oro-1-d, $sec-oro-1-c)
+    border-bottom: solid 10px $color-negro-80
+.fondo-amarillo-resultados
+    background-image: linear-gradient(to right, $sec-oro-1-a, $sec-oro-1-b, $sec-oro-1-c, $sec-oro-1-d)
+    border-bottom: solid 10px $color-negro-80
+.titulo-resultados
+    font-size: 20px
+    font-weight: 600
+
+.titulo-nom-premio
+    font-size: 20px
+    font-weight: 600
+
+.titulo-mon-premio
+    font-size: 20px
+    font-weight: 600
+
+.subtitulos-alert
+    background-image: linear-gradient(to right, $sec-oro-1-a, $sec-oro-1-d, $sec-oro-1-c, $sec-oro-1-b)
+    color: $color-negro-80
+    border: solid 2px $sec-oro-1-c
+    margin-top: 70px
+    border-radius: 10px
+
+.fondo-azul-degrad
+    background: linear-gradient(90deg, $azul-loteria-100, $azul-loteria-80, $azul-loteria-100)
+
+.fondo-azul-textura
+    background-color: $azul-loteria-100
+    background-image: url(./assets/img/trama1.jpg)
+    background-repeat: no-repeat
+    background-attachment: fixed
+    background-position: center
+    background-size: 100% 100%
+
+.fondo-azul-oscuro
+    background-color: $color-azul-oscuro
+
+
+.fondo-amarillo-textura
+    background-color: $amarillo-loteria-100
+    background-image: url(./assets/img/tramaAmarilla.jpg)
+    background-repeat: no-repeat
+    background-attachment: fixed
+    background-position: center
+    background-size: 100% 100%
+
+.fondo-negro-90
+    background-color: $color-negro-90 !important
+    
+.fondo-negro-80
+    background-color: $color-negro-80
+
+.tituloPremMayor
+    font-size: 25px 
+    font-weight: 700
+
+.balota-numero-resultado
+    font-family: $fuenteMontserrat
+    width: 40px
+    height: 40px
+    background-color: $azul-loteria-80
+    font-size: 28px
+    line-height: 37px
+    margin: 1px
+    font-weight: 600
+    color: $azul-loteria-40
+    border: solid 1px $azul-loteria-100
+    background: url(./assets/img/balotaazu.png)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 100%
+
+.balota-serie-resultado
+    font-family: $fuenteMontserrat
+    width: 40px
+    height: 40px
+    background-color: $pardo-loteria-100
+    font-size: 28px
+    line-height: 37px
+    margin: 1px
+    font-weight: 600
+    color: $sec-oro-1-b
+    border: solid 1px $sec-oro-1-c
+    background: url(./assets/img/balotaama.png)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 100%, cover
+
+.balota-numero-resultado-sm
+    font-family: $fuenteMontserrat
+    width: 35px
+    height: 35px
+    background-color: $color-blanco-100
+    font-size: 18px
+    line-height: 32px
+    margin: 1px
+    font-weight: 600
+    color: $azul-loteria-40
+    border: solid 1px $azul-loteria-100
+    background: url(./assets/img/balotaazu.png)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 100%
+
+.balota-serie-resultado-sm
+    font-family: $fuenteMontserrat
+    width: 30px
+    height: 30px
+    background-color: $pardo-loteria-100
+    font-size: 14px
+    line-height: 27px
+    margin: 1px
+    font-weight: 600
+    color: $sec-oro-1-b
+    border: solid 1px $pardo-loteria-100
+    background: url(./assets/img/balotaama.png)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 100%
+
+.texto-pequeno
+    font-size: $tamanoTextoPeq
+
+.tarjetaNovedad
+    background-color: $color-negro-80
+
+.botonMenu
+    position: fixed
+    top:0px
+    right: 0px
+    width: 70px
+    height: 70px
+    line-height: 70px
+    font-size: 36px
+    transition: 1s
+    color: $color-negro-80
+    cursor: pointer
+    z-index: 1049
+
+.botonMenu:hover
+    color: $pardo-loteria-100
+
+.botonCerrarRes
+    position: fixed
+    top:12px
+    right: 10px
+    width: 50px
+    height: 50px
+    line-height: 40px
+    font-size: 30px
+    transition: 1s
+    color: $color-negro-80
+    cursor: pointer
+    z-index: 1095
+
+.botonCerrarRes:hover
+    color: black
+
+.itemMenuGeral
+    padding: 10px
+    margin: 10px auto
+    width: 100%
+    border: solid 1px $pardo-loteria-100
+    color: $color-negro-80
+    font-weight: 400
+    font-size: 18px
+    background-color: rgba(245, 171, 0, 0.2)
+    cursor: pointer
+    opacity: 0
+    transform: scale(0.5)
+    display: block
+
+.itemMenuGeral:hover
+    background-color: $pardo-loteria-100
+    color: $color-negro-80
+
+.sinNovedad
+    background: url(./assets/img/backSinNovedad.svg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 50%, cover
+    
+#slider:host
+    display: block
+
+.tarjetaHome
+    opacity: 0
+    transform: scale(0.2)
+    position: relative
+    cursor: pointer
+    // background-image: linear-gradient(45deg, $azul-loteria-100, $azul-loteria-80, $azul-loteria-100)
+    // height: // DI´namico en template con ngStyle
+    // border: solid 1px $azul-loteria-100
+    .contenidoTarjeta
+        color: $sec-oro-1-c
+        position: absolute
+        width: 100%
+        top:50%
+        left: 0
+        transform: translate(0, -50%)
+    .peel-compra
+        position: absolute
+        top: 0px
+        right: 0px
+        img
+            width: 100%
+            max-width: 300px
+
+.list-group.list-group-flush
+    background-color: inherit !important
+
+.list-group-item
+    background-color: transparent
+    color: $color-negro-50
+    border-color: transparent
+
+.botSocial
+    background-color: $color-negro-50
+    color: $color-negro-80
+    margin-right: 5px
+    padding: 5px
+    border-radius: 10px
+    border-color: $color-negro-50
+
+footer, footer a
+    color: $color-negro-50
+
+footer a:hover
+    color: $color-blanco-90
+
+footer h4
+    font-weight: 600
+
+.noselect
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+#contenidoTransparencia
+    h1
+        color: $color-blanco-100
+    h3
+        color: $color-blanco-80
+        font-size: 20px
+    h4
+        color: $color-blanco-80
+        font-size: 16px
+    h5
+        color: $color-blanco-80
+        font-size: 14px
+    a
+        color: $azul-loteria-40
+    .alert
+        background-color: $azul-loteria-100
+        border-radius: 15px
+        border-color: $azul-loteria-80
+
+.parrafoTexto
+    color: #a3b6cd
+    font-size: 20px
+    font-weight: 300
+
+.lineaPlanPremios
+    background-color: rgba(255, 255, 255, 0.2)
+    white-space: normal
+    border: solid 2px $pardo-loteria-100
+    .nombre
+        font-size: 18px
+        white-space: nowrap
+    .bruto
+        font-size: 20px
+        white-space: nowrap
+        font-weight: 600
+    .neto
+        font-size: 18px
+        white-space: nowrap
+.lineaAproxPremios
+    color: $color-blanco-80
+    background-color: rgba(255, 255, 255, 0.2)
+    white-space: normal
+    border: solid 2px $azul-loteria-100
+    border-radius: 10px
+    .titulo
+        color: $pardo-loteria-60
+    .monto
+        font-size: 13px
+
+
+.area-extra-plan
+    background-color: $color-negro-80
+    color: $color-blanco-80
+    border-radius: 10px
+    overflow: hidden
+    font-size: 14px
+
+.card
+    background-color: $azul-loteria-80
+    border-radius: 10px
+    
+
+@media only screen and (min-width: 992px)
+    .fondo-amarillo-degrad
+        // background-image: linear-gradient(to right, $pardo-loteria-60, $amarillo-loteria-60), url(./assets/img/trama1.png)
+        background-image: url(./assets/img/tramaAmarilla.jpg)
+        background-attachment: fixed
+        background-repeat: no-repeat
+        background-position: top center
+        background-size: 100% 100%
+
+    .titulo-resultados
+        font-size: 60px
+        font-weight: 600
+
+    .titulo-nom-premio
+        font-size: 20px
+        font-weight: 600
+
+    .titulo-mon-premio
+        font-size: 30px
+        font-weight: 600
+
+    .itemMenuGeral
+        width: 40%
+
+    .tituloPremMayor
+        font-size: 45px 
+
+
+    .balota-numero-resultado
+        font-family: $fuenteMontserrat
+        width: 100px
+        height: 100px
+        background-color: $azul-loteria-80
+        font-size: 70px
+        line-height: 100px
+        margin: 1px
+        font-weight: 600
+        color: $azul-loteria-40
+        border: solid 1px $azul-loteria-100
+
+    .balota-serie-resultado
+        font-family: $fuenteMontserrat
+        width: 70px
+        height: 70px
+        background-color: $pardo-loteria-100
+        font-size: 50px
+        line-height: 70px
+        margin: 1px
+        font-weight: 600
+        color: $sec-oro-1-b
+        border: solid 1px $sec-oro-1-c
+
+    .balota-numero-resultado-sm
+        font-family: $fuenteMontserrat
+        width: 50px
+        height: 50px
+        background-color: $color-blanco-100
+        font-size: 33px
+        line-height: 50px
+        margin: 1px
+        font-weight: 600
+        color: $azul-loteria-40
+        border: solid 1px $azul-loteria-100
+
+    .balota-serie-resultado-sm
+        font-family: $fuenteMontserrat
+        width: 45px
+        height: 45px
+        background-color: $pardo-loteria-100
+        font-size: 30px
+        line-height: 45px
+        margin: 1px
+        font-weight: 600
+        color: $sec-oro-1-b
+        border: solid 1px $sec-oro-1-c
+
+    .parrafoTexto
+        font-size: 27px
+
+    .area-extra-plan
+        background-color: $color-negro-80
+        color: $color-blanco-80
+        border-radius: 10px
+        overflow: hidden
+
+    .subtitulos-alert
+        display: inline-block
+        min-width: 25%

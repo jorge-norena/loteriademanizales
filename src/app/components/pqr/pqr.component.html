@@ -1,0 +1,267 @@
+<div class="container-fluid m-0 p-0">
+
+    <div class="fondo-azul-oscuro p-3" id="contenidoTransparencia" style="min-height: 100vh;">
+        <a [routerLink]="[ '/' ]" class="btn btn-primary mt-3"><i class="fas fa-angle-left fa-lg"></i> <span class="ml-2 d-none d-lg-inline">Volver</span></a>
+        <h1 class="py-4">
+            PQR´s <small class="text-muted" style="color: #a3b6cd !important;"> Peticiones, quejas y reclamos</small>
+        </h1>
+        <div class="row">
+            <div class="col-12 col-lg-5">
+                <div *ngIf="!logueado" id="areaLogin">
+                    <div class="row">
+                        <div class="col-12" style="position: relative;">
+
+                            <div class="alert alert-primary text-light text-center bg-dark my-4 p-4 shadow">
+                                <div class="row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <button class="btn btn-warning btn-block h-100" (click)="cambiarOpcion(1)">
+                                            <div>
+                                                <i class="fas fa-address-card fa-3x"></i>
+                                                <br>
+                                                <p class="m-0 p-0" style="font-size: larger;">
+                                                    RADICAR
+                                                </p>
+                                                <small>Nuevo Caso</small>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button class="btn btn-warning btn-block h-100" (click)="cambiarOpcion(2)">
+                                            <div>
+                                                <i class="fas fa-search fa-3x"></i>
+                                                <br>
+                                                <p class="m-0 p-0" style="font-size: larger;">
+                                                    CONSULTAR
+                                                </p>
+                                                <small>Caso Radicado</small>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div *ngIf="opcion === 1" id="radicarCaso">
+                                    <hr>
+                                    <h3 class="text-left mb-2">
+                                        Radicar Caso
+                                    </h3>
+                                    <p class="small mb-3">
+                                        Ingrese todos los campos del formulario
+                                    </p>
+                                    <form (ngSubmit)="radicar()" #pqrForm="ngForm" novalidate>
+                                        <div class="row text-left">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="nombre">Nombre(s)</label>
+                                                    <input type="text" class="form-control" name="nombre" [(ngModel)]="objCaso.nombre" #nombre="ngModel" required [ngClass]="{'is-invalid': (nombre.errors?.required)  && nombre.touched}">
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="apellido">Apellido(s)</label>
+                                                    <input type="text" class="form-control" name="apellido" [(ngModel)]="objCaso.apellido" #apellido="ngModel" required [ngClass]="{'is-invalid': (apellido.errors?.required)  && apellido.touched}">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row text-left">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="identificacion">No. Identificación</label>
+                                                    <input type="text" class="form-control" name="identificacion" [(ngModel)]="objCaso.identificacion" #identificacion="ngModel" required [ngClass]="{'is-invalid': (identificacion.errors?.required)  && identificacion.touched}">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="email">Email</label>
+                                                    <input type="text" class="form-control" name="email" [(ngModel)]="objCaso.email" #email="ngModel" required [ngClass]="{'is-invalid': (email.errors?.required)  && email.touched}">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row text-left">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="direccion">Dirección</label>
+                                                    <input type="text" class="form-control" name="direccion" [(ngModel)]="objCaso.direccion" #direccion="ngModel" required [ngClass]="{'is-invalid': (direccion.errors?.required)  && direccion.touched}">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row text-left">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="ciudad">Ciudad / Municipio</label>
+                                                    <input type="text" class="form-control" name="ciudad" [(ngModel)]="objCaso.ciudad" #ciudad="ngModel" required [ngClass]="{'is-invalid': (ciudad.errors?.required)  && ciudad.touched}">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="pais">País</label>
+                                                    <input type="text" class="form-control" name="pais" [(ngModel)]="objCaso.pais" #pais="ngModel" required [ngClass]="{'is-invalid': (pais.errors?.required)  && pais.touched}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="caso">Describa su caso</label>
+                                                    <textarea class="form-control" id="caso" rows="5" name="caso" [(ngModel)]="objCaso.caso" #caso="ngModel" required [ngClass]="{'is-invalid': (caso.errors?.required)  && caso.touched}"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div *ngIf="pqrForm.invalid" class="col-sm-12 text-danger my-2">
+                                                    Diligencie todos los datos solicitados
+                                                </div>
+                                                <button [disabled]="pqrForm.invalid" type="submit" class="btn btn-warning">Radicar</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div *ngIf="opcion === 2" id="consultarCaso">
+                                    <hr>
+                                    <h3 class="text-left mb-2">
+                                        Consultar Caso
+                                    </h3>
+                                    <p class="small mb-3">
+                                        Ingrese el número de radicación
+                                    </p>
+                                    <form (ngSubmit)="consultar()" #consultaForm="ngForm" novalidate>
+                                        <div class="row text-left">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="ticketConsulta">No. Radicado</label>
+                                                    <input type="text" class="form-control" name="ticketConsulta" [(ngModel)]="ticketConsulta" #ticketConsultaRef="ngModel" required [ngClass]="{'is-invalid': (ticketConsultaRef.errors?.required)  && ticketConsultaRef.touched}">
+                                                </div>
+                                                <div class="col">
+                                                    <button class="btn btn-warning" [disabled]="consultaForm.invalid" type="submit">Consultar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <app-precarga *ngIf="cargando"></app-precarga>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-7 text-light">
+                <p>
+                    La Constitución Política de Colombia, en su Artículo 2 consagra como fines esenciales del Estado, entre otros, el servir a la comunidad, la facilitación de la participación de todos en las decisiones que los afectan, y la obligación de asegurar el cumplimiento
+                    de los derechos sociales del Estado y de los particulares.
+                </p>
+                <p>
+                    Por su parte la ley 142 de 1994, en su artículo 2, establece como una de las finalidades de la intervención del estado el establecimiento de mecanismos que garanticen a los usuarios el acceso a los servicios y su participación en la gestión y fiscalización
+                    de su prestación. En este sentido desarrolla en sus artículos 154, 158 y 159, la importancia de contar con el sistema de peticiones quejas y reclamos, como instrumento de transparencia y mejoramiento continuo.
+                </p>
+                <h2>Objetivo</h2>
+                <p>
+                    El Sistema de Participación Ciudadana se creó con el fin de recibir, radicar y tramitar las solicitudes que los usuarios formulen y que se relacionen con el cumplimiento de la misión de La Empresa Municipal para la Salud (EMSA), en el marco de una gestión
+                    transparente, participativa, enfocada siempre hacia el mejoramiento continuo.
+                </p>
+                <h2>
+                    Características del Sistema de Participación
+                </h2>
+                <ul>
+                    <li>
+                        Servir de herramienta para la toma de decisiones operativas que se conviertan en acciones correctivas y preventivas en aras del mejoramiento continuo.
+                    </li>
+                    <li>Servir como mecanismo detector y corrector de irregularidades, errores u omisiones en el cumplimiento de las normas o procedimientos.</li>
+                    <li>Identificar las buenas acciones que se presenten con el fin de promover su realización y mejorar su aplicación.</li>
+                    <li>Contribuir a la labor evaluativa y de revisión de las acciones de EMSA en desarrollo de su misión</li>
+                </ul>
+
+                <h2>
+                    Definiciones
+                </h2>
+                <ul>
+                    <li> <strong>Derecho de Petición.</strong> Solicitud o requerimiento de una acción en forma verbal o escrita, presentada de manera respetuosa sobre las actividades que sean de competencia de EMSA., ya sean de interés general o particular;
+                        así como elevar consultas, solicitar información y obtener copias de los documentos que reposan en sus archivos. Las normas citadas sólo regulan de manera específica los términos de respuesta que siempre es de 15 días.</li>
+                    <li><strong>Derecho de Petición de Información.</strong> Entiéndase por petición de información la solicitud elevada con el propósito de que el funcionario de a conocer cómo ha actuado en un caso determinado, o permita el examen de los
+                        documentos públicos que tiene en su poder o expida copia de los documentos que reposan en la oficina a su cargo. Termino de respuesta 15 días.</li>
+                    <li><strong>Derecho de Petición de Consulta.</strong> El derecho de petición, incluye el de formular consultas escritas o verbales. Tendrá el carácter de consulta, toda petición que solicite el parecer, dictamen, opinión o concepto de
+                        EMSA, como institución, acerca de las materias propias al servicio público que presta. Termino de respuesta 15 días.</li>
+                    <li><strong>Quejas.</strong> Manifestaciones de inconformidad con algo o alguien en la prestación de los servicios.</li>
+                    <li><strong>Reclamo.</strong> Derecho que tiene todo ciudadano de exigir o demandar solución referente a la atención inadecuada u omisión en la prestación del servicio público.</li>
+                    <li><strong>Sugerencia.</strong> Es la proposición, idea o indicación que se ofrece o presenta con el propósito de incidir en el mejoramiento de un proceso cuyo objeto se encuentre relacionado con la prestación del servicio o el cumplimiento
+                        de una función institucional.</li>
+                    <li><strong>Usuario.</strong> Persona natural o jurídica que requiere los servicios de EMSA. Bien sea de manera directa o indirecta.</li>
+                </ul>
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+<div class="modal fade " id="modalPqr" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered ">
+        <div class="modal-content fondo-negro-80">
+            <div class="modal-header fondo-amarillo-degrad">
+                <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-address-card fa-lg"></i> PQR</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body py-2 text-light text-center my-5">
+                <div *ngIf="ticketRespuesta && !errRadica">
+                    <p>
+                        Su caso ha sido radicado. <br> No. de radicación:
+                    </p>
+                    <h2 class="text-warning">
+                        {{ticketRespuesta}}
+                    </h2>
+                </div>
+                <div *ngIf="errRadica">
+                    <p class="text-danger">
+                        Ocurrió un error.
+                    </p>
+                    <h2>
+                        Espere unos minutos y vuelva a intentar.
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade " id="modalPqrCons" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered ">
+        <div class="modal-content fondo-negro-80">
+            <div class="modal-header fondo-amarillo-degrad">
+                <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-address-card fa-lg"></i> PQR Consulta</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body py-2 text-light text-center my-5">
+                <div *ngIf="ticketRespuesta && !errConsulta">
+                    <p>
+                        Su caso está siendo procesado.
+                    </p>
+                    <h2 class="text-warning">
+                        {{ticketRespuesta}}
+                    </h2>
+                </div>
+                <div *ngIf="errConsulta">
+                    <p class="text-danger">
+                        No se ha encontrado el caso.
+                    </p>
+                    <p>
+                        Si tiene alguna inquietud, escriba a: emsa.loteriademanizales@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

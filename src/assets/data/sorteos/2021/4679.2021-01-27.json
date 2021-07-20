@@ -1,0 +1,208 @@
+{
+    "sorteo": [{
+        "num": "4679",
+        "fec": "2021-01-27",
+        "prox": "2021-01-27"
+    }],
+    "resultados": [{
+            "nom": "Mayor",
+            "pre": "1500000000",
+            "num": "1311",
+            "ser": "187",
+            "ciu": "Cali",
+            "dep": "76"
+        },
+        {
+            "nom": "Seco 1",
+            "pre": "50000000",
+            "num": "3987",
+            "ser": "197",
+            "ciu": "Cartagena",
+            "dep": "13"
+        },
+        {
+            "nom": "Seco 2",
+            "pre": "40000000",
+            "num": "1701",
+            "ser": "140",
+            "ciu": "Manizales",
+            "dep": "17"
+        },
+        {
+            "nom": "Seco 3",
+            "pre": "40000000",
+            "num": "5543",
+            "ser": "054",
+            "ciu": "Cartagena",
+            "dep": "13"
+        },
+        {
+            "nom": "Seco 4",
+            "pre": "40000000",
+            "num": "8263",
+            "ser": "093",
+            "ciu": "Manizales",
+            "dep": "17"
+        },
+        {
+            "nom": "Seco 5",
+            "pre": "40000000",
+            "num": "7442",
+            "ser": "110",
+            "ciu": "Bucaramanga",
+            "dep": "68"
+        },
+        {
+            "nom": "Seco 6",
+            "pre": "40000000",
+            "num": "1828",
+            "ser": "068",
+            "ciu": "Cartagena",
+            "dep": "13"
+        },
+        {
+            "nom": "Seco 7",
+            "pre": "30000000",
+            "num": "9114",
+            "ser": "105",
+            "ciu": "Manizales",
+            "dep": "17"
+        },
+        {
+            "nom": "Seco 8",
+            "pre": "30000000",
+            "num": "9911",
+            "ser": "176",
+            "ciu": "Cali",
+            "dep": "76"
+        },
+        {
+            "nom": "Seco 9",
+            "pre": "30000000",
+            "num": "1831",
+            "ser": "154",
+            "ciu": "Manizales",
+            "dep": "17"
+        },
+        {
+            "nom": "Seco 10",
+            "pre": "30000000",
+            "num": "3876",
+            "ser": "177",
+            "ciu": "Cartagena",
+            "dep": "13"
+        },
+        {
+            "nom": "Seco 11",
+            "pre": "30000000",
+            "num": "9613",
+            "ser": "098",
+            "ciu": "Manizales",
+            "dep": "17"
+        },
+        {
+            "nom": "Seco 12",
+            "pre": "20000000",
+            "num": "6822",
+            "ser": "123",
+            "ciu": "Manizales",
+            "dep": "17"
+        },
+        {
+            "nom": "Seco 13",
+            "pre": "20000000",
+            "num": "4181",
+            "ser": "143",
+            "ciu": "Cartagena",
+            "dep": "13"
+        },
+        {
+            "nom": "Seco 14",
+            "pre": "20000000",
+            "num": "8216",
+            "ser": "101",
+            "ciu": "Medellín",
+            "dep": "05"
+        },
+        {
+            "nom": "Seco 15",
+            "pre": "20000000",
+            "num": "8345",
+            "ser": "192",
+            "ciu": "Bogotá",
+            "dep": "11"
+        },
+        {
+            "nom": "Seco 16",
+            "pre": "20000000",
+            "num": "4414",
+            "ser": "175",
+            "ciu": "Cartagena",
+            "dep": "13"
+        },
+        {
+            "nom": "Seco 17",
+            "pre": "20000000",
+            "num": "5070",
+            "ser": "120",
+            "ciu": "Manizales",
+            "dep": "17"
+        },
+        {
+            "nom": "Seco 18",
+            "pre": "10000000",
+            "num": "6015",
+            "ser": "001",
+            "ciu": "Cali",
+            "dep": "76"
+        },
+        {
+            "nom": "Seco 19",
+            "pre": "10000000",
+            "num": "1970",
+            "ser": "094",
+            "ciu": "Manizales",
+            "dep": "17"
+        },
+        {
+            "nom": "Seco 20",
+            "pre": "10000000",
+            "num": "4811",
+            "ser": "188",
+            "ciu": "Cartagena",
+            "dep": "13"
+        },
+        {
+            "nom": "Seco 21",
+            "pre": "10000000",
+            "num": "8440",
+            "ser": "095",
+            "ciu": "Manizales",
+            "dep": "17"
+        },
+        {
+            "nom": "Seco 22",
+            "pre": "10000000",
+            "num": "0230",
+            "ser": "183",
+            "ciu": "Cartagena",
+            "dep": "13"
+        },
+        {
+            "nom": "Seco 23",
+            "pre": "10000000",
+            "num": "3152",
+            "ser": "072",
+            "ciu": "Cartagena",
+            "dep": "13"
+        },
+        {
+            "nom": "Seco 24",
+            "pre": "10000000",
+            "num": "2772",
+            "ser": "099",
+            "ciu": "Bogotá",
+            "dep": "11"
+        }
+    ]
+}

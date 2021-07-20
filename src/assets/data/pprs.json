@@ -1,0 +1,356 @@
+{
+    "pp1": [{
+            "num": "1",
+            "nom": "PREMIO MAYOR",
+            "bru": "$ 1,500,000,000",
+            "net": "$ 996,000,000",
+            "tot": "$ 1,500,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 1 DE 50 MILLONES",
+            "bru": "$ 50,000,000",
+            "net": "$ 33,200,000",
+            "tot": "$ 50,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 2 DE 40 MILLONES",
+            "bru": "$ 40,000,000",
+            "net": "$ 26,560,000",
+            "tot": "$ 40,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 3 DE 40 MILLONES",
+            "bru": "$ 40,000,000",
+            "net": "$ 26,560,000",
+            "tot": "$ 40,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 4 DE 40 MILLONES",
+            "bru": "$ 40,000,000",
+            "net": "$ 26,560,000",
+            "tot": "$ 40,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 5 DE 40 MILLONES",
+            "bru": "$ 40,000,000",
+            "net": "$ 26,560,000",
+            "tot": "$ 40,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 6 DE 40 MILLONES",
+            "bru": "$ 40,000,000",
+            "net": "$ 26,560,000",
+            "tot": "$ 40,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 7 DE 30 MILLONES",
+            "bru": "$ 30,000,000",
+            "net": "$ 19,920,000",
+            "tot": "$ 30,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 8 DE 30 MILLONES",
+            "bru": "$ 30,000,000",
+            "net": "$ 19,920,000",
+            "tot": "$ 30,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 9 DE 30 MILLONES",
+            "bru": "$ 30,000,000",
+            "net": "$ 19,920,000",
+            "tot": "$ 30,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 10 DE 30 MILLONES",
+            "bru": "$ 30,000,000",
+            "net": "$ 19,920,000",
+            "tot": "$ 30,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 11 DE 30 MILLONES",
+            "bru": "$ 30,000,000",
+            "net": "$ 19,920,000",
+            "tot": "$ 30,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 12 DE 20 MILLONES",
+            "bru": "$ 20,000,000",
+            "net": "$ 13,280,000",
+            "tot": "$ 20,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 13 DE 20 MILLONES",
+            "bru": "$ 20,000,000",
+            "net": "$ 13,280,000",
+            "tot": "$ 20,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 14 DE 20 MILLONES",
+            "bru": "$ 20,000,000",
+            "net": "$ 13,280,000",
+            "tot": "$ 20,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 15 DE 20 MILLONES",
+            "bru": "$ 20,000,000",
+            "net": "$ 13,280,000",
+            "tot": "$ 20,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 16 DE 20 MILLONES",
+            "bru": "$ 20,000,000",
+            "net": "$ 13,280,000",
+            "tot": "$ 20,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 17 DE 20 MILLONES",
+            "bru": "$ 20,000,000",
+            "net": "$ 13,280,000",
+            "tot": "$ 20,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 18 DE 10 MILLONES",
+            "bru": "$ 10,000,000",
+            "net": "$ 6,640,000",
+            "tot": "$ 10,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 19 DE 10 MILLONES",
+            "bru": "$ 10,000,000",
+            "net": "$ 6,640,000",
+            "tot": "$ 10,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 20 DE 10 MILLONES",
+            "bru": "$ 10,000,000",
+            "net": "$ 6,640,000",
+            "tot": "$ 10,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 21 DE 10 MILLONES",
+            "bru": "$ 10,000,000",
+            "net": "$ 6,640,000",
+            "tot": "$ 10,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 22 DE 10 MILLONES",
+            "bru": "$ 10,000,000",
+            "net": "$ 6,640,000",
+            "tot": "$ 10,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 23 DE 10 MILLONES",
+            "bru": "$ 10,000,000",
+            "net": "$ 6,640,000",
+            "tot": "$ 10,000,000"
+        },
+        {
+            "num": "1",
+            "nom": "SECO 24 DE 10 MILLONES",
+            "bru": "$ 10,000,000",
+            "net": "$ 6,640,000",
+            "tot": "$ 10,000,000"
+        }
+    ],
+    "pp2": [{
+            "num": "9",
+            "nom": "TRES ULTIMAS",
+            "bru": "$ 7,228,916",
+            "net": "$ 4,800,000",
+            "tot": "$ 65,060,241"
+        },
+        {
+            "num": "9",
+            "nom": "TRES PRIMERAS",
+            "bru": "$ 7,228,916",
+            "net": "$ 4,800,000",
+            "tot": "$ 65,060,241"
+        },
+        {
+            "num": "9",
+            "nom": "DOS PRIMERAS Y ULTIMA",
+            "bru": "$ 7,228,916",
+            "net": "$ 4,800,000",
+            "tot": "$ 65,060,241"
+        },
+        {
+            "num": "9",
+            "nom": "PRIMERA Y DOS ULTIMAS",
+            "bru": "$ 7,228,916",
+            "net": "$ 4,800,000",
+            "tot": "$ 65,060,241"
+        },
+        {
+            "num": "80",
+            "nom": "DOS ULTIMAS CIFRAS",
+            "bru": "$ 1,445,783",
+            "net": "$ 1,200,000",
+            "tot": "$ 115,662,650"
+        },
+        {
+            "num": "80",
+            "nom": "DOS PRIMERAS CIFRAS",
+            "bru": "$ 1,445,783",
+            "net": "$ 1,200,000",
+            "tot": "$ 115,662,650"
+        },
+        {
+            "num": "887",
+            "nom": "ULTIMA CIFRA",
+            "bru": "$ 61,446",
+            "net": "$ 51,000",
+            "tot": "$ 54,502,389"
+        },
+        {
+            "num": "23",
+            "nom": "MAYOR CUALQUIER ORDEN",
+            "bru": "$ 9,789,157",
+            "net": "$ 6,500,000",
+            "tot": "$ 225,150,602"
+        }
+    ],
+    "pp3": [{
+            "num": "199",
+            "nom": "MAYOR EN OTRA SERIE",
+            "bru": "$ 1,445,783",
+            "net": "$ 1,200,000",
+            "tot": "$ 287,710,841"
+        },
+        {
+            "num": "1,791",
+            "nom": "TRES ULTIMAS",
+            "bru": "$ 120,482",
+            "net": "$ 100,000",
+            "tot": "$ 215,783,119"
+        },
+        {
+            "num": "1,791",
+            "nom": "TRES PRIMERAS",
+            "bru": "$ 120,482",
+            "net": "$ 100,000",
+            "tot": "$ 215,783,119"
+        },
+        {
+            "num": "1,791",
+            "nom": "DOS PRIMERAS Y ULTIMA",
+            "bru": "$ 19,277",
+            "net": "$ 16,000",
+            "tot": "$ 34,525,250"
+        },
+        {
+            "num": "1,791",
+            "nom": "PRIMERA Y DOS ULTIMAS",
+            "bru": "$ 19,277",
+            "net": "$ 16,000",
+            "tot": "$ 34,525,250"
+        },
+        {
+            "num": "16,119",
+            "nom": "DOS ULTIMAS",
+            "bru": "$ 14,458",
+            "net": "$ 12,000",
+            "tot": "$ 233,045,278"
+        },
+        {
+            "num": "16,119",
+            "nom": "DOS PRIMERAS",
+            "bru": "$ 14,458",
+            "net": "$ 12,000",
+            "tot": "$ 233,045,278"
+        },
+        {
+            "num": "177,309",
+            "nom": "ULTIMA",
+            "bru": "$ 9,639",
+            "net": "$ 8,000",
+            "tot": "$ 1,708,996,343"
+        }
+    ],
+    "pp4": [{
+        "num": "4,776",
+        "nom": "SECOS EN  DIF SERIE",
+        "bru": "$ 120,482",
+        "net": "$ 100,000",
+        "tot": "$ 575,421,650"
+    }],
+    "adicional": [{
+            "nom": "Fracciones por Billete",
+            "val": "4"
+        },
+        {
+            "nom": "Porcentaje con Retencion y el 17%",
+            "val": "1"
+        },
+        {
+            "nom": "Porcentaje del 17% Sin Retencion",
+            "val": "1"
+        },
+        {
+            "nom": "VALOR BILLETE",
+            "val": "8,000"
+        },
+        {
+            "nom": "VALOR FRACCION",
+            "val": "2,000"
+        },
+        {
+            "nom": "NUMERO DE SERIES",
+            "val": "200"
+        },
+        {
+            "nom": "EMISION DE BILLETES",
+            "val": "2,000,000"
+        },
+        {
+            "nom": "EMISION DE FRACCIONES",
+            "val": "8,000,000"
+        },
+        {
+            "nom": "BASE DE RETENCION 2018",
+            "val": "1,709,000"
+        },
+        {
+            "nom": "TOTAL PREMIOS",
+            "val": "222,817"
+        },
+        {
+            "nom": "TOTAL PLAN DE PREMIOS",
+            "val": "$ 6,400,055,381"
+        },
+        {
+            "nom": "EMISION BRUTA",
+            "val": "16,000,000,000"
+        },
+        {
+            "nom": "EMISION NETA",
+            "val": "12,000,000,000"
+        },
+        {
+            "nom": "PLAN DE PREMIOS/EMISION BRUTA",
+            "val": "40.00%"
+        }
+    ]
+}

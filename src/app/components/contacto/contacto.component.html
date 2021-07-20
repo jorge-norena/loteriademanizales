@@ -1,0 +1,66 @@
+<div class="container-fluid m-0 p-0">
+
+    <div class="fondo-azul-oscuro p-3" id="contenidoContacto" style="min-height: 100vh;">
+        <a [routerLink]="[ '/' ]" class="btn btn-primary mt-3"><i class="fas fa-angle-left fa-lg"></i> <span class="ml-2 d-none d-lg-inline">Volver</span></a>
+        <h1 class="py-4 text-light">
+            Contacto <small class="text-muted" style="color: #a3b6cd !important;"> Funcionarios</small>
+        </h1>
+
+        <div class="row">
+            <div class="col-12 col-lg-9">
+                <div class="row">
+                    <div *ngFor="let contact of arrContactos" class="col-12 col-lg-6 my-3">
+                        <div class="card h-100 shadow">
+                            <div class="card-header fondo-oro-1 text-dark">
+                                <h5 style="font-weight: 600;">
+                                    <i class="fas fa-user fa-lg"></i> {{contact.cargo}}
+                                </h5>
+                            </div>
+                            <div class="card-body bg-dark">
+
+                                <div class="text-right texto-blanco-loteria-80" style="font-size: 25px; font-weight: 300;">
+                                    {{contact.nombre}}
+                                </div>
+                                <p class="card-text small texto-blanco-loteria-80"><i class="fas fa-info-circle"></i> {{contact.func}}</p>
+                            </div>
+                            <div class="card-footer bg-dark">
+                                <div class="row texto-blanco-loteria-80 my-3">
+                                    <div class="col-5 text-truncate">
+                                        <i class="fas fa-phone-alt"></i> Ext. {{contact.ext}}
+                                    </div>
+                                    <div class="col-7 text-right text-truncate">
+                                        <a href="mailto:{{contact.mail}}"><i class="fas fa-envelope"></i> {{contact.mail}}</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3">
+                <div *ngIf="true" class="bg-dark p-2 p-lg-3 p-xl-4 my-3 text-light text-center shadow" style="border: solid 1px #CC9934; border-radius: 7px;">
+                    <h4 class=" titulo">
+                        <i class="fas fa-headset fa-3x"></i> <br>
+                        <span class="mt-3">Peticiones, Quejas y Reclamos</span>
+                    </h4>
+                    <hr>
+                    <p>
+                        Sistema de participación ciudadana. Empresa Municipal para la Salud.
+                    </p>
+                    <a [routerLink]="[ '/pqr' ]" class="btn btn-primary btn-sm">
+                        Radicar caso
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+</div>

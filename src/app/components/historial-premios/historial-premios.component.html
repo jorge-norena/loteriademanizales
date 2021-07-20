@@ -1,0 +1,57 @@
+<div class="container-fluid m-0 p-0">
+
+    <div class="fondo-oro-1 p-3" id="contenidoPlan" style="min-height: 100vh;">
+        <a [routerLink]="[ '/' ]" class="btn btn-primary mt-3"><i class="fas fa-angle-left fa-lg"></i> <span class="ml-2 d-none d-lg-inline">Volver</span></a>
+        <h1 class="py-4 text-dark">
+            Resultados <small class="text-muted" style="color: #585858 !important;"> Sorteos Anteriores</small>
+        </h1>
+        <h2 class="text-center" style="font-weight: 600;">
+            Año 2021
+        </h2>
+        <div class="row m-0 p-0 mb-3">
+            <div *ngIf="!cargando" class="col-12 m-0 p-0 p-lg-3 p-xl-4 mb-3">
+                <div class="row">
+                    <div *ngFor="let arch of arrArchivos " class="col-12 col-sm-6 col-lg-4 my-3">
+                        <div class="card fondo-amarillo-menu h-100 shadow">
+                            <div class="card-body text-center">
+                                <small>Sorteo No.</small>
+                                <h2 class="card-title" style="font-weight: 600;">
+                                    {{arch.num}}
+                                </h2>
+                                <div class="" style="font-size: 18px; font-weight: 300;">
+                                    <i class="far fa-calendar-alt"></i> {{arch.fech | date}}
+                                </div>
+                            </div>
+                            <div class="card-footer text-right">
+                                <button class="btn btn-primary btn-sm" (click)="consultaResultados(anoConsulta, arch.comp)">
+                                    <i class="fas fa-eye"></i> Ver
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-precarga *ngIf="cargando"></app-precarga>
+    </div>
+</div>
+
+
+<div id="modalDetalle" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content fondo-amarillo-menu">
+            <div class="modal-header">
+                <h5 class="modal-title">Sorteo No {{sorteoConsulta}} <small>({{fechaConsulta | date}})</small></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body text-center" style="min-height: 200px;">
+                <app-precarga *ngIf="cargandoDet"></app-precarga>
+                <div *ngIf="!cargandoDet">
+                    <app-linea-resultados *ngFor="let linea of objResultados" [nombre]="linea.nom" [premio]="linea.pre" [numero]="linea.num" [serie]="linea.ser" [ciudad]="linea.ciu"></app-linea-resultados>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

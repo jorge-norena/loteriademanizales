@@ -1,0 +1,14 @@
+<div class="py-2">
+    <h5 class="titulo-nom-premio text-center m-0">
+        Premio {{nombre}}
+    </h5>
+    <h1 class="titulo-mon-premio text-center m-0">
+        ${{+premio | number}}
+    </h1>
+    <div class="d-flex justify-content-center align-items-center mb-2">
+        <div *ngFor="let digNum of arrNumero" class="balota-numero-resultado-sm rounded-circle text-center">{{digNum}}</div>
+        <div *ngFor="let digSer of arrSerie" class="balota-serie-resultado-sm rounded-circle text-center">{{digSer}}</div>
+    </div>
+    <p>{{ciudad}}</p>
+    <hr class="p-0 m-0 mb-1" style="opacity: 0.6;">
+</div>

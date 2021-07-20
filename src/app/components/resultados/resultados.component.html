@@ -1,0 +1,135 @@
+<div class="row m-0 p-1 mt-2 fondo-oro-1" style="cursor: pointer; z-index: 1025; position: relative;" (click)="toggleDetalles()">
+    <div class="col m-0 p-0">
+
+
+        <div id="titResLg" class=" d-none d-lg-block">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="d-flex justify-content-left align-items-center">
+                    <div style="font-size: 30px; font-weight: 400; margin-right: 20px;">
+                        Premio Mayor
+                    </div>
+                    <br>
+                    <div style="font-size: 50px; font-weight: 600;">
+                        $1.500 Millones
+                    </div>
+                </div>
+                <!-- <div class="d-flex justify-content-end align-items-center p-1" style="width: 164px;">
+                    <div class="texto-pequeno">
+                        <strong>
+                     {{ objSorteo?.fec | date:'mediumDate' }} <i class="far fa-calendar-alt"></i>
+                </strong>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div id="titResSm" class="d-lg-none">
+            <div id="titResSm" class="d-flex justify-content-center align-items-center">
+                <div class="d-flex justify-content-left align-items-center" style="width: 208px;">
+                    <div style="font-size: 25px; font-weight: 700;">
+                        $1.500 Millones
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end align-items-center p-1" style="width: 164px;">
+                    <div class="texto-pequeno">
+                        <strong>
+                     {{ objSorteo?.fec | date:'mediumDate' }} <i class="far fa-calendar-alt"></i>
+                </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="balota-numero-resultado rounded-circle text-center shadow">{{arrNumeroMayor[0]}}</div>
+                <div class="balota-numero-resultado rounded-circle text-center shadow">{{arrNumeroMayor[1]}}</div>
+                <div class="balota-numero-resultado rounded-circle text-center shadow">{{arrNumeroMayor[2]}}</div>
+                <div class="balota-numero-resultado rounded-circle text-center shadow">{{arrNumeroMayor[3]}}</div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center p-1">
+                <div class="balota-serie-resultado rounded-circle text-center shadow">{{arrSerieMayor[0]}}</div>
+                <div class="balota-serie-resultado rounded-circle text-center shadow">{{arrSerieMayor[1]}}</div>
+                <div class="balota-serie-resultado rounded-circle text-center shadow">{{arrSerieMayor[2]}}</div>
+                <button class="btn btn.warning ml-3 shadow"><i class="fas fa-angle-down fa-lg"></i> <span class="ml-2 d-none d-lg-inline">Todos los premios</span></button>
+            </div>
+        </div>
+
+
+
+        <div class=" d-none d-lg-block">
+            <div class="d-flex justify-content-center align-items-center my-3">
+                <div class="d-flex justify-content-between align-items-center" style="width: 372px;">
+                    <div class="texto-pequeno">
+                        <strong> Próximo sorteo:</strong> {{ objSorteo?.prox | date:'d MMM h:mm a' }}
+                    </div>
+                    <div class="texto-pequeno">
+                        <app-timer [tiempo]="difFechas"></app-timer>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" d-lg-none">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="d-flex justify-content-between align-items-center" style="width: 372px;">
+                    <div class="texto-pequeno">
+                        <strong> Próximo sorteo:</strong> {{ objSorteo?.prox | date:'d MMM h:mm a' }}
+                    </div>
+                    <div class="texto-pequeno">
+                        <app-timer [tiempo]="difFechas"></app-timer>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <app-precarga *ngIf="cargando"></app-precarga>
+</div>
+<div id="detResultados" class="row m-0 fondo-amarillo-resultados text-center" style="width: 100%; height: 100%; position: fixed; top:-100%; left: 0; z-index: 1027; transform: translate(0, -0%); padding-top: 80px; overflow: hidden;">
+    <div class="col m-0 h-100" style="overflow: auto;">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h1 class="titulo-resultados mx-2 text-center">Resultados Lotería de Manizales
+                    <br> Sorteo {{objSorteo?.num}}
+                </h1>
+                <h5>{{ objSorteo?.fec | date:'mediumDate' }}</h5>
+            </div>
+        </div>
+        <app-linea-resultados *ngFor="let linea of objResultados" [nombre]="linea.nom" [premio]="linea.pre" [numero]="linea.num" [serie]="linea.ser" [ciudad]="linea.ciu"></app-linea-resultados>
+
+        <div class="row my-4">
+            <div class="col">
+                <a [routerLink]="[ '/plan-premios' ]" class="btn btn-warning p-3 m-2 shadow" (click)="toggleDetalles()">
+                    <h5 style="font-weight: 600;">
+                        <strong>
+                        PLAN DE PREMIOS</strong>
+                    </h5>
+                    <p>
+                        Información exacta de montos de los premios, aproximaciones y más
+                    </p>
+                </a>
+            </div>
+            <div class="col">
+                <a [routerLink]="[ '/resultados' ]" class="btn btn-warning p-3 m-2 shadow" (click)="toggleDetalles()">
+                    <h5 style="font-weight: 600;">
+                        <strong>
+                        RESULTADOS ANTERIORES</strong>
+                    </h5>
+                    <p>
+                        Historial de resultados Lotería de Manizales
+                    </p>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<button *ngIf="mostrarDetalles" id="botToggleRes" class="btn btn-warning botonCerrarRes m-0 shadow-sm" (click)="toggleDetalles()" xstyle="position: fixed; top: 50px; right: 20px; z-index: 2095 !important;">
+        <div class=" texto-pardo-loteria-100 text-center" >
+            <i class="fas fa-chevron-up"></i>
+        </div></button>

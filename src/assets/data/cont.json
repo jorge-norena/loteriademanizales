@@ -1,0 +1,43 @@
+{
+    "contactos": [{
+            "cargo": "Gerente",
+            "nombre": "Arturo Espejo Arbeláez",
+            "ext": "105",
+            "mail": "gerente@loteriademanizales.com",
+            "func": "Representar a la Administración Municipal en lo concerniente a la dirección estratégica de EMSA y al logro de su misión, para generar recursos con destinos al sector salud",
+            "pqr": "0"
+        },
+        {
+            "cargo": "Secretaria Ejecutiva",
+            "nombre": "Yolanda Elsy Chavez Ojeda",
+            "ext": "101",
+            "mail": "gerencia@loteriademanizales.com",
+            "func": "Facilitar las labores que se desarrollen en la dependencia, mediante la atención ágil y oportuna al publico, la elaboración de documentos, el manejo de las comunicaciones telefónicas y colaboración a otras dependencias.",
+            "pqr": "1"
+        },
+        {
+            "cargo": "Profesional Universitario Sistemas",
+            "nombre": "John Jairo Zuluaga Henao",
+            "ext": "114",
+            "mail": "sistemas@loteriademanizales.com",
+            "func": "Propender por el logro de una estructura tecnológica e informática adecuadas a las necesidades de la entidad, diseñando, organizando, coordinando, ejecutando y controlando los planes, programas, proyectos, con miras a optimizar los recursos tecnológicos.",
+            "pqr": "0"
+        },
+        {
+            "cargo": "Dirección Técnica",
+            "nombre": "Diana Marcela Jurado",
+            "ext": "108",
+            "mail": "dirtecnico@loteriasdemanizales.com",
+            "func": "Diseñar e implementar políticas y estrategias relacionadas con la producción, mercadeo y comercialización que potencialicen la colocación de los productos de forma sostenible, perdurable y creciente a fin de garantizar el retorno de ingresos que viabilicen la operación de la entidad. así mismo formular, ejecutar, evaluar y controlar planes, programas y proyectos tendientes a fortalecer la comercialización y mercadeo de los productos .",
+            "pqr": "0"
+        },
+        {
+            "cargo": "Profesional Universitario Mercadeo y Distribución",
+            "nombre": "Juan Carlos Giraldo Salazar",
+            "ext": "117",
+            "mail": "mercadeo@loteriademanizales.com",
+            "func": "Ejecutar labores tendientes a la ejecución de los sorteos, atención a los clientes y distribuidores de la lotería de Manizales, apoyar las actividades de mercadeo que desarrolle la entidad, servir de soporte en las demás dependencias de la entidad.",
+            "pqr": "0"
+        }
+    ]
+}

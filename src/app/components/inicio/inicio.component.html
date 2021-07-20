@@ -1,0 +1,175 @@
+<div class="container-fluid overflow-hidden p-0" style="min-height: 100vh;">
+    <!-- <div id="areaResultados" class="p-0">
+        <app-resultados></app-resultados>
+
+
+    </div> -->
+    <div id="areaPromo" class="p-0">
+        <div id="rowPromo" class="row p-0 m-0 fondo-azul-oscuro">
+            <div class="col-12 col-lg-6 m-0 p-0">
+                <div id="slider" #slider2 class="carousel slide" data-ride="carousel" (window:resize)="onResize($event)" style="opacity: 0;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="assets/img/shots/shot-la-rebaja.jpg" alt="">
+                        </div>
+                        <div class="carousel-item ">
+                            <img class="d-block w-100" src="assets/img/shots/shot-devol.jpg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/img/shots/Banner6400.jpg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/img/shots/shot-5.jpg" alt="">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Sig</span>
+                    </a>
+                    <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Ant</span>
+                    </a>
+                </div>
+            </div>
+            <div id="colDerecha" class="col-12 col-lg-6 p-0 m-0">
+
+                <div *ngIf="true" class="text-center" [ngStyle]="{'height.px': altoSlider/2}">
+                    <div class="row text-light m-0 p-0" [ngStyle]="{'height.px': altoSlider/4}" style="perspective: 1000px;">
+
+                        <div class="col-6 m-0 p-0 w-100 h-100" (mouseenter)="animaRollTarjeta('#tarjeta4')" (click)="redir('plan-premios')">
+                            <div id="tarjeta4" class="w-100 tarjetaHome noselect" [ngStyle]="{'height.px': altoSlider/4}">
+                                <div class="contenidoTarjeta">
+                                    <h1><i class="fas fa-dollar-sign fa-lg"></i></h1>
+                                    <h5>Premios</h5>
+                                    <div class="small px-2" style="line-height: 1.2 ;">
+                                        Conozca nuestro magnífico plan de premios, aproximaciones y como reclamar su premio
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 m-0 p-0 w-100 h-100" (mouseenter)="animaRollTarjeta('#tarjeta2')" (click)="redirCompra()">
+                            <div id="tarjeta2" class="w-100 tarjetaHome noselect" [ngStyle]="{'height.px': altoSlider/4}">
+                                <div class="contenidoTarjeta">
+                                    <h1><i class="fas fa-shopping-cart fa-lg"></i></h1>
+                                    <h5>Comprar</h5>
+                                    <div class="small   px-2" style="line-height: 1.2 ;">
+                                        Adquiera su billete de Lotería de Manizales. Recuerde que para ganarla hay que comprala
+                                    </div>
+                                </div>
+                                <div class="peel-compra">
+                                    <img src="assets/img/peel-compra-sup.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 m-0 p-0 w-100 h-100" (mouseenter)="animaRollTarjeta('#tarjeta1')" (click)="redir('numerologia')">
+                            <div id="tarjeta1" class="w-100 tarjetaHome noselect" [ngStyle]="{'height.px': altoSlider/4}" style="position: relative; cursor: pointer;">
+                                <div class="contenidoTarjeta">
+                                    <h1><i class="fas fa-hat-wizard fa-lg"></i></h1>
+                                    <h5>Numerología</h5>
+                                    <div class="small px-2" style="line-height: 1.2 ;">
+                                        Pruebe su suerte. Nuestra aplicación puede suguerirle los números de su fortuna
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 m-0 p-0 w-100 h-100" (mouseenter)="animaRollTarjeta('#tarjeta3')" (click)="redir('transparencia')">
+                            <div id="tarjeta3" class="w-100 tarjetaHome noselect" [ngStyle]="{'height.px': altoSlider/4}">
+                                <div class="contenidoTarjeta">
+                                    <h1><i class="fas fa-layer-group fa-lg"></i></h1>
+                                    <h5>Transparencia</h5>
+                                    <div class="small px-2" style="line-height: 1.2 ;">
+                                        Acceso abierto a información administrativa y financiera
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="_sinNovedad pt-2" [ngStyle]="{'height.px': altoSlider/2}">
+                    <div *ngIf="muestraNovedades" id="novedad" class="text-light h-100 p-0">
+                        <div class="card border-0 h-100" style="border-radius: 0; background-color: transparent;">
+                            <div class="card-header" style="background-color: transparent; ">
+                                <ul class="nav nav-tabs card-header-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link fondo-negro-90 active border-0 text-warning" href="#">Novedades</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled border-0 text-warning" href="#">Boletines</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body" style="">
+                                <h4 class="card-title" style="font-weight: 600;">Información para Distribuidores de la Lotería de Manizales</h4>
+                                <p class="card-text" style="font-size: 13px;">Con gran satisfacción queremos manifestarles que, a partir del miércoles 24 de febrero de 2021, con el sorteo número 4683 la LOTERIA DE MANIZALES se ha habilitado el sistema para la devolución a través de su nueva plataforma
+                                    mejorada y renovada para su servicio como distribuidores. Si tiene algún inconveniente enviar sus archivos al correo: <a href="mailto:emsa.loteriademanizales@gmail.com">emsa.loteriademanizales@gmail.com</a> y confirmar
+                                    en los teléfonos 8841927 Ext. 117 – 119 018000423806 Ext. 117 – 119 3154672635.</p>
+                                <a href="http://loteriademanizales.com/#/devoluciones" target="_blank" class="btn btn-sm btn-primary">Realizar Devolución Web</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="modal fade " id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered ">
+        <div class="modal-content fondo-negro-80">
+            <div class="modal-header fondo-amarillo-degrad">
+                <h5 class="modal-title" id="exampleModalLabel"> Atención</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body py-5 text-light">
+                <p>
+                    Se le informa a los usuarios de nuestro sitio web, que por estos días se estarán realizando actividades de migración y actualización de servidores.
+                </p>
+                <p>
+                    Debido a lo anterior es posible encontrar retrasos en la actualización de la información y algunos vínculos pueden dejar de funcionar.
+                </p>
+                <p>
+                    Agradecemos su atención</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Entiendo</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade " id="modalComprar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered ">
+        <div class="modal-content fondo-negro-80">
+            <div class="modal-header fondo-amarillo-degrad">
+                <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-shopping-cart"></i> Comprar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body py-2 text-light">
+                <p class="alert alert-light text-center" role="alert">
+                    <a href="https://www.loticolombia.com/" target="_blank">
+                        <img src="assets/img/logo-loticolombia.png" alt="Loticolombia" style="width: 70%;">
+                    </a>
+                </p>
+                <p class="alert alert-light text-center" role="alert">
+                    <a href="https://www.lottired.net/portal/inicio" target="_blank">
+                        <img src="assets/img/logo-lottired.png" alt="Lottired" style="width: 70%;">
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

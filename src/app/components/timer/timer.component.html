@@ -1,0 +1,3 @@
+<span class=" mb-2 mr-2" [ngClass]="{'d-none': expiro}">
+    {{(daysDisplay) && (daysDisplay <= 23) ? daysDisplay : '00'}}d  {{(hoursDisplay) && (hoursDisplay <= 23) ? hoursDisplay : hoursDisplay}}h {{(minutesDisplay) && (minutesDisplay <= 59) ? minutesDisplay : '00'}}m : {{(secondsDisplay) && (secondsDisplay <= 59) ? secondsDisplay : '00'}}s <i class="far fa-clock fa-pulse"></i>
+</span>
